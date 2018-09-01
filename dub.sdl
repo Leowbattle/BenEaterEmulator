@@ -1,0 +1,5 @@
+name "ben-eater-8bit-emulator"
+description "A minimal D application."
+authors "Leo Battle"
+copyright "Copyright © 2018, Leo Battle"
+license "proprietary"
