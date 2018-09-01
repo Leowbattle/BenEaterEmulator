@@ -13,7 +13,7 @@ class BenEaterEmulator {
 			ubyte opcode = instruction >> 4;
 			ubyte argument = instruction & 0x0f;
 
-			final switch (opcode) with (Opcodes) {
+			switch (opcode) with (Opcodes) {
 				case LDA:
 					regA = memory[argument];
 					break;
@@ -45,7 +45,11 @@ class BenEaterEmulator {
 				case NOP:
 					break;
 				case HLT:
+					writeln("Done");
 					return;
+				default:
+					writefln("Invalid.\nOpcode: %08b\nArgument: %08b", opcode, argument);
+					break;
 			}
 			//writefln("%08b", instruction);
 		}
